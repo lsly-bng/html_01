@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>html5_ex09</title>
+	</head>
+
+	<body>
+		<p>목차</p>
+		<ol>			
+			<li>
+				<a href="./ex_01.html" target="_blank">h1~h6</a>		
+			</li>
+			<li>
+				<a href="./ex_02.html" target="_blank">p br blockquote q strong em i</a>
+			</li>
+			<li>
+				<a href="./ex_03.html" target="_blank">ol li, ul li</a>
+			</li>
+			<li>
+				<a href="./ex_04.html" target="_blank">img a</a>
+			</li>
+			<li>
+				<a href="./ex_05.html" target="_blank">기본 테이블 태그</a>		
+			</li>
+			<li>
+				<a href="./ex_06.html" target="_blank">테이블 셀 합치기</a>
+			</li>
+			<li>
+				<a href="./ex_07.html" target="_blank">테이블 thead tbody</a>
+			</li>
+			<li>
+				<a href="./ex_08.html" target="_blank">모집분야 예제2</a>
+			</li>
+			<li>
+				<a href="./ex_09.html" target="_blank">폼태그</a>
+			</li>			
+		</ol>
+
+		<hr>
+		
+		<h1>html5</h1>
+		<h1>기본태그</h1>
+		<h3>1.9 폼(form)태그</h3>
+
+		<form> 
+		<!-- form tag 속성으로 action="" (get/post 할 주소)	/ method="" (get or post) -->
+			<label for="txt-id">아이디</label>
+			<input id="txt-id" type="text" name="userid" value="" placeholder="아이디">
+			
+			<br>
+			
+			<label for="txt-n/name">닉네임</label>
+			<input id="txt-n/name" type="text" name="n/name" value="" placeholder="닉네임">
+			
+			<br>
+			
+			<label for="pw">비밀번호</label>
+			<input id="pw" type="password" name="pw" value="" placeholder="비밀번호">
+			
+			<br>
+			
+			<!-- 눈에보이지않음 / 개발용 / developer's only use-->
+			<input type="hidden" name="seq" value="3">  
+	
+			<br>
+			
+			<!-- 위헙하기 때문에 개발에 제한이 많이 걸려 있다 / 브라우저마다 default 정해져 있다 -->
+			<label for="fileupload">프로필사진</label>
+			<input id="fileupload" type="file" >
+			
+			<br>
+			<br>
+			
+			<label for="chk-book">독서</label>
+			<input id="chk-book" type="checkbox" name="hobby" value="book">
+			
+			<label for="chk-music">음악</label>
+			<input id="chk-music" type="checkbox" name="hobby" checked="checked" value="music">
+			
+			<label for="chk-trip">여행</label>
+			<input id="chk-trip" type="checkbox" name="hobby" value="trip">
+			
+			<br>
+			
+			<label for="chk-dog">개</label>
+			<input id="chk-dog" type="checkbox" name="pet" value="dog" checked="checked">
+			
+			<label for="chk-cat">고양이</label>
+			<input id="chk-cat" type="checkbox" name="pet" value="cat">
+			
+			<label for="chk-bird">새</label>
+			<input id="chk-bird" type="checkbox" name="pet" value="bird">
+			
+			<br>
+			<br>
+			
+			<label for="rdo-apple">사과</label>
+			<input id="rdo-apple" type="radio" name="fruit" value="apple">
+			
+			<label for="rdo-grape">포도</label>
+			<input id="rdo-grape" type="radio" name="fruit" value="grape" checked="checked">
+			
+			<label for="rdo-orange">사과</label>
+			<input id="rdo-orange" type="radio" name="fruit" value="orange">
+			
+			<br>
+			
+			<label for="rdo-m1">1월</label>
+			<input id="rdo-m1" type="radio" name="month" value="January">
+			
+			<label for="rdo-m2">2월</label>
+			<input id="rdo-m2" type="radio" name="month" value="February">
+			
+			<label for="rdo-m3">3월</label>
+			<input id="rdo-m3" type="radio" name="month" value="March">
+			
+			<br>
+			<br>
+			
+			<label for="sel-telecom">통신사</label>
+			<select id="sel-telecom" name="telecom">
+				<option value="" selected="selected">통신사를 선택해 주세요</option>
+				<option value="SKT">SKT</option>
+				<option value="KTF">KTF</option>
+				<option value="LGU">LGU</option>
+				<option value="etc">기타</option>
+			</select>
+			
+			<br>
+			<br>
+			
+			<textarea name="content">안녕하세요 게시판글입니다.</textarea>
+			<!-- 주의 - 공백(enter/space) 인식되니 tag 안쪽 작성할때 주의 -->
+			
+			<br>
+			<br>
+			
+			<fieldset>
+				<legend>개인정보</legend>
+				
+				<label for="txt-id">아이디</label>
+				<input id="txt-id" type="text" name="userid" value="" placeholder="아이디">
+				
+				<br>
+				
+				<label for="txt-n/name">닉네임</label>
+				<input id="txt-n/name" type="text" name="n/name" value="" placeholder="닉네임">
+				
+				<br>
+				
+				<label for="pw">비밀번호</label>
+				<input id="pw" type="password" name="pw" value="" placeholder="비밀번호">
+			</fieldset>
+			
+			<br>
+			
+			<!-- <input type="submit" value="회원가입">  -->
+			<!-- 이 방법의 코딩은 추천하지 않음 -->
+			<button type="submit">회원가입</button>
+			<!-- 나중에 수정할때 이 코딩 방법이 더 수월하고 편함 -->
+			<!-- type=button (팝업창호출) / submit (등록/전송) / reset (초기화) -->
+			
+			<br>
+		</form>
+		
+	</body>
+</html>
